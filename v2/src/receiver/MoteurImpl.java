@@ -21,8 +21,8 @@ public class MoteurImpl implements Moteur {
 	}
 
 	/**
-	 * copie la selection dans le pp
-	 * efface la selection du texte
+	 * Methode Couper
+	 * Copie la selection dans le presse-papier, puis efface du texte la selection.
 	 */
 	public void couper() {
 		int borne_inf = sel[0];
@@ -37,7 +37,8 @@ public class MoteurImpl implements Moteur {
 	}
 
 	/**
-	 * copie la selection dans le pp
+	 * Methode Copier
+	 * Copie la selection dans le presse-papier.
 	 */
 	public void copier() {
 		int borne_inf = sel[0];
@@ -49,14 +50,17 @@ public class MoteurImpl implements Moteur {
 	}
 
 	/**
-	 * colle contenu de pp dans la selection
+	 * Methode Couper
+	 * Colle le presse-papier dans le texte a la place de la selection.
 	 */
 	public void coller() {
 		inserer(pp);
 	}
 
 	/**
-	 * colle le parametre a la place de la selection
+	 * Methode inserer
+	 * Insere la chaine de cractere passee en parametre a la place de la selection.
+	 * @param s : String, chaine de caractere a inserer
 	 */
 	public void inserer(String s) {
 		for (int i = 0; i < (sel[1] - sel[0]); i++){
@@ -66,7 +70,10 @@ public class MoteurImpl implements Moteur {
 	}
 
 	/**
-	 * initialise les bornes inf et sup
+	 * Methode selectionner
+	 * Definit les deux bornes inferieures et superieures prevues pour selectionner du texte.
+	 * @param debut : int, borne inferieure
+	 * @param fin : int, borne superieure
 	 */
 	public void selectionner(int debut, int fin) {
 		if (debut < 0) debut = 0;

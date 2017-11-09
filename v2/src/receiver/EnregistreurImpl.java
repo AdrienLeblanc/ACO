@@ -14,16 +14,28 @@ public class EnregistreurImpl implements Enregistreur {
 		
 	public EnregistreurImpl() { }
 
+	/**
+	 * Methode demarrer
+	 * Signale le demarrage de l'enregistrement.
+	 */
 	@Override
 	public void demarrer() {
 		setAdemarre(true);
 	}
 
+	/**
+	 * Methode stopper
+	 * Signale l'arret de l'enregistrement.
+	 */
 	@Override
 	public void stopper() {
 		setAdemarre(false);
 	}
 
+	/**
+	 * Methode rejouer
+	 * Execute dans l'ordre chaque commande enregistree
+	 */
 	@Override
 	public void rejouer() {
 		for (Mememto m : this.list) {
@@ -32,6 +44,11 @@ public class EnregistreurImpl implements Enregistreur {
 		}
 	}
 	
+	/**
+	 * Methode addMememto
+	 * Ajoute un Mememto a l'enregistrement.
+	 * @param m : Mememto
+	 */
 	public void addMememto(Mememto m) {
 		list.add(m);
 	}

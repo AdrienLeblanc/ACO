@@ -50,7 +50,11 @@ public class MoteurImpl implements Moteur {
 	}
 
 	/**
+<<<<<<< HEAD
 	 * Methode Coller
+=======
+	 * Methode Couper
+>>>>>>> 8616d0f2a226c51c6b9cd66f9dd913d7be5c95bb
 	 * Colle le presse-papier dans le texte a la place de la selection.
 	 */
 	public void coller() {

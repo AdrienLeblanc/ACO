@@ -4,6 +4,7 @@ import java.util.HashMap;
 import java.util.Scanner;
 
 import command.Command;
+import command.SelectionnerCmd;
 
 
 public class IHMImpl implements IHM {
@@ -17,7 +18,6 @@ public class IHMImpl implements IHM {
 	}
 
 	public String getText() {
-		// Demande saisie utilisateur
 		System.out.print("Chaine de caracteres a inserer: ");
 		@SuppressWarnings("resource")
 		Scanner sc = new Scanner(System.in);
@@ -25,24 +25,31 @@ public class IHMImpl implements IHM {
 		return str;
 	}
 
-	public void terminal() {
-		// Demande saisie utilisateur
+	public void start() {
 		System.out.print("ACO-TP1-V1$: ");
 		Scanner sc = new Scanner(System.in);
 		String str = sc.nextLine();
 
 		while(!str.equals("exit")) {
 			if (map.containsKey(str)) {
-				Command cmd = map.get(str);
-				cmd.execute();
-			} else {
-				System.out.println("Commande non reconnue: " + str);
+				if (str.equals("selectionner")) {
+					// On demande le debut et la fin de la selection
+					SelectionnerCmd cmd = (SelectionnerCmd) map.get(str);
+					System.out.print("debut: ");
+					int debut = sc.nextInt();
+					cmd.setDebut(debut);
+					System.out.print("fin: ");
+					int fin = sc.nextInt();
+					cmd.setFin(fin);
+					cmd.execute();
+				} else {
+					Command cmd = map.get(str);
+					cmd.execute();
+				}
 			}
-			// Redemande saisie utilisateur
-			System.out.print("ACO-TP1-V1$: ");
+			if (!str.equals("")) System.out.print("ACO-TP1-V1$: ");
 			str = sc.nextLine();
 		}
-		System.out.println("EXIT");
 		sc.close();
 	}
 }

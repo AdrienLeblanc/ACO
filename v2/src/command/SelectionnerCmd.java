@@ -33,6 +33,22 @@ public class SelectionnerCmd implements Command {
 	public MememtoSelectionner create() {
 		return new MememtoSelectionner();
 	}
+	
+	public int getDebut() {
+		return debut;
+	}
+
+	public void setDebut(int debut) {
+		this.debut = debut;
+	}
+
+	public int getFin() {
+		return fin;
+	}
+
+	public void setFin(int fin) {
+		this.fin = fin;
+	}
 
 	class MememtoSelectionner implements Mememto {
 

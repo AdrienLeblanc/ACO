@@ -1,5 +1,6 @@
 package client;
 
+import command.AfficherCmd;
 import command.CollerCmd;
 import command.CopierCmd;
 import command.CouperCmd;
@@ -35,80 +36,31 @@ public class Editeur {
 
 		/* Initialisations */
 		IHMImpl ihm = new IHMImpl();
-		MoteurImpl engine = new MoteurImpl(null, new StringBuffer());
+		MoteurImpl engine = new MoteurImpl(null, new StringBuffer(""));
 		Editeur editeur = new Editeur(engine, ihm);
 		engine.setEditeur(editeur);
 		EnregistreurImpl enregistreur = new EnregistreurImpl();
 		
-		/* _________________________ */
-		/* __________TESTS__________ */
-		/* _________________________ */
-		
-		/* BUT de la macro : Réécrire le mot en ayant dupliqué au debut de la chaine de caractere la toute premiere lettre */
-		
-		/* On démarre la macro */
-		DemarrerEgt demarrer = new DemarrerEgt(enregistreur);
-		demarrer.execute();
-		
-		/* Une commande inserer */
 		InsererCmd inserer = new InsererCmd(engine, enregistreur, ihm, null);
-		inserer.execute();
-		
-		/* Une commande selectionner */
-		SelectionnerCmd selectionner = new SelectionnerCmd(engine, enregistreur, 0, 1);
-		selectionner.execute();
-		
-		/* Une commande copier */
+		SelectionnerCmd selectionner = new SelectionnerCmd(engine, enregistreur, 0, 0);
 		CopierCmd copier = new CopierCmd(engine, enregistreur);
-		copier.execute();
-		
-		/* Une commande selectionner */
-		SelectionnerCmd selectionner2 = new SelectionnerCmd(engine, enregistreur, 0, 0);
-		selectionner2.execute();
-		
-		/* Une commande coller */
 		CollerCmd coller = new CollerCmd(engine, enregistreur);
-		coller.execute();
-		
-		System.out.println(engine.getTexte());
-				
-		/* On stoppe la macro */
-		StopperEgt stopper = new StopperEgt(enregistreur);
-		stopper.execute();
-		
-		/* On rejoue la macro */
-		RejouerEgt rejouer = new RejouerEgt(enregistreur);
-		rejouer.execute();
-		rejouer.execute();
-		rejouer.execute();
-		
-		System.out.println(engine.getTexte());
-		
-		/* Une commande couper */
 		CouperCmd couper = new CouperCmd(engine, enregistreur);
-		couper.execute();
-
-		/* _________________________ */
-		/* ______FIN_DES_TESTS______ */
-		/* _________________________ */
+		AfficherCmd afficher = new AfficherCmd(engine);
+		DemarrerEgt demarrer = new DemarrerEgt(enregistreur);
+		StopperEgt stopper = new StopperEgt(enregistreur);
+		RejouerEgt rejouer = new RejouerEgt(enregistreur);
 		
 		ihm.addCommand("inserer", inserer);
 		ihm.addCommand("selectionner", selectionner);
 		ihm.addCommand("copier", copier);
 		ihm.addCommand("couper", couper);
-		ihm.addCommand("selectionner2", selectionner2);
 		ihm.addCommand("coller", coller);
-		
-		/* Reinitialisation engine */
-		engine.setTexte(new StringBuffer(""));
-		engine.setPp("");
-		engine.setSelection(new int[]{0,0});
-		
-		/* Terminal */
-		ihm.terminal();
-		
-		/* Resultat de ce qu'on a fait avec le terminal */
-		System.out.println(engine.getTexte());
+		ihm.addCommand("afficher", afficher);
+		ihm.addCommand("demarrer", demarrer);
+		ihm.addCommand("stopper", stopper);
+		ihm.addCommand("rejouer", rejouer);
+		ihm.start();
 	}
 
 	public IHM getIhm() {

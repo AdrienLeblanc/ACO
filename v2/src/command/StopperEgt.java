@@ -3,7 +3,12 @@ package command;
 import receiver.EnregistreurImpl;
 
 public class StopperEgt implements Command {
-	
+
+/**
+ * @(#) StopperEgt.java
+ * @author LEBLANC Adrien && BUSSEREAU Keryann
+ * @version 1.0 V1 du projet mini-editeur
+ */
 private final EnregistreurImpl enregistreur;
 	
 	public StopperEgt(EnregistreurImpl enregistreur) {

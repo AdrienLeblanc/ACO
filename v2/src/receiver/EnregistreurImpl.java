@@ -5,7 +5,11 @@ import java.util.ArrayList;
 import command.Command;
 import mememto.Mememto;
 
-
+/**
+ * @(#) EnregistreurImpl.java
+ * @author LEBLANC Adrien && BUSSEREAU Keryann
+ * @version 1.0 V1 du projet mini-editeur
+ */
 public class EnregistreurImpl implements Enregistreur {
 	
 	ArrayList<Mememto> list = new ArrayList<Mememto>();

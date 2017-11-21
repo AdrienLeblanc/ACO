@@ -6,7 +6,11 @@ import java.util.Scanner;
 import command.Command;
 import command.SelectionnerCmd;
 
-
+/**
+ * @(#) IHMImpl.java
+ * @author LEBLANC Adrien && BUSSEREAU Keryann
+ * @version 1.0 V1 du projet mini-editeur
+ */
 public class IHMImpl implements IHM {
 
 	private HashMap<String, Command> map = new HashMap<String, Command>();

@@ -10,7 +10,11 @@ import command.SelectionnerCmd;
 import receiver.EnregistreurImpl;
 import receiver.MoteurImpl;
 
-
+/**
+ * @(#) EnregistreurImplTest.java
+ * @author LEBLANC Adrien && BUSSEREAU Keryann
+ * @version 1.0 V1 du projet mini-editeur
+ */
 public class EnregistreurImplTest {
 
 	@Test

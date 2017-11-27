@@ -9,15 +9,11 @@ import receiver.MoteurImpl;
 /**
  * @(#) InsererCmd.java
  * @author LEBLANC Adrien && BUSSEREAU Keryann
-<<<<<<< HEAD:v3/src/command/InsererCmd.java
  * @version 3.0 V3 du projet mini-editeur
-=======
- * @version 1.0 V1 du projet mini-editeur
->>>>>>> dc37de6ae232b2a29cae71d4512d1042f4381bab:v2/src/command/InsererCmd.java
  */
 public class InsererCmd implements Command {
 
-	private final MoteurImpl engine;
+	private MoteurImpl engine;
 	
 	private final EnregistreurImpl enregistreur;
 
@@ -39,14 +35,14 @@ public class InsererCmd implements Command {
 	}
 
 	public void execute() {
-		if (getTextBool) this.input = this.ihm.getText();
+		this.engine = historique.getEngine();
+		if (this.getTextBool) this.input = this.ihm.getText();
 		if (this.enregistreur.getAdemarre()) {
 			MememtoInserer mem = this.create();
 			mem.setMememto();
 			this.enregistreur.addMememto(mem);
 		}
-		historique.addExecution(this.create());
-		historique.addEtatsMoteur(this.engine);
+		this.historique.addExecution(this.create());
 		this.engine.inserer(this.input);
 	}
 	
@@ -55,20 +51,26 @@ public class InsererCmd implements Command {
 	}
 
 	class MememtoInserer implements Mememto {
-
+		
 		private MoteurImpl engineMememto;
 		
 		private IHM ihmMememto;
 		
 		private String inputMememto;
 
-		public MememtoInserer() { }
+		public MememtoInserer() {
+			this.setMememto();
+		}
 
 		@Override
 		public void setMememto() {
-			this.engineMememto = engine;
+			this.engineMememto = historique.getEngine();
 			this.ihmMememto = ihm;
 			this.inputMememto = input;
+		}
+		
+		public MoteurImpl getEngine() {
+			return this.engineMememto;
 		}
 
 		public InsererCmd getCommand() {

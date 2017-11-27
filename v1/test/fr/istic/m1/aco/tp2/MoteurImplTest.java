@@ -7,11 +7,7 @@ import org.junit.Test;
 import client.Editeur;
 import receiver.MoteurImpl;
 
-/**
- * @(#) MoteurImplTest.java
- * @author LEBLANC Adrien && BUSSEREAU Keryann
- * @version 1.0 V1 du projet mini-editeur
- */
+
 public class MoteurImplTest {
 
 	@Test
@@ -25,19 +21,6 @@ public class MoteurImplTest {
 
 		assertTrue(m.getTexte().toString().equals("Cec un code de test"));
 		assertTrue(m.getPp().equals("i est"));
-	}
-	
-	@Test
-	public void testCouper2() {
-		Editeur e = new Editeur(null, null);
-		StringBuffer s = new StringBuffer();
-		MoteurImpl m = new MoteurImpl(e, s);
-		m.setTexte(new StringBuffer("Ceci est un code de test"));
-		m.setSelection(new int[]{0,24});
-		m.couper();
-		
-		assertTrue(m.getTexte().toString().equals(""));
-		assertTrue(m.getPp().equals("Ceci est un code de test"));
 	}
 
 	@Test

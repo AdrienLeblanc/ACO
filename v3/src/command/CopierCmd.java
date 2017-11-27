@@ -8,15 +8,11 @@ import receiver.MoteurImpl;
 /**
  * @(#) CopierCmd.java
  * @author LEBLANC Adrien && BUSSEREAU Keryann
-<<<<<<< HEAD:v3/src/command/CopierCmd.java
  * @version 3.0 V3 du projet mini-editeur
-=======
- * @version 1.0 V1 du projet mini-editeur
->>>>>>> dc37de6ae232b2a29cae71d4512d1042f4381bab:v2/src/command/CopierCmd.java
  */
 public class CopierCmd implements Command {
 
-	private final MoteurImpl engine;
+	private MoteurImpl engine;
 	
 	private final EnregistreurImpl enregistreur;
 	
@@ -30,13 +26,13 @@ public class CopierCmd implements Command {
 
 	@Override
 	public void execute() {
+		this.engine = historique.getEngine();
 		if (this.enregistreur.getAdemarre()) {
 			MememtoCopier mem = this.create();
 			mem.setMememto();
 			this.enregistreur.addMememto(mem);
 		}
-		historique.addExecution(this.create());
-		historique.addEtatsMoteur(this.engine);
+		this.historique.addExecution(this.create());
 		this.engine.copier();
 	}
 	
@@ -45,19 +41,21 @@ public class CopierCmd implements Command {
 	}
 
 	class MememtoCopier implements Mememto {
-		
-		private MoteurImpl engineMememto;
-		
+				
 		public MememtoCopier() { }
 		
 		@Override
 		public void setMememto() {
-			this.engineMememto = engine;
+		}
+		
+		public MoteurImpl getEngine() {
+			return engine;
 		}
 		
 		public CopierCmd getCommand() {
-			CopierCmd cmd = new CopierCmd(this.engineMememto, enregistreur, historique);
+			CopierCmd cmd = new CopierCmd(historique.getEngine(), enregistreur, historique);
 			return cmd;
 		}
 	}
+	
 }

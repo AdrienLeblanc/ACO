@@ -4,8 +4,10 @@ import command.AfficherCmd;
 import command.CollerCmd;
 import command.CopierCmd;
 import command.CouperCmd;
+import command.DefaireCmd;
 import command.DemarrerEgt;
 import command.InsererCmd;
+import command.RefaireCmd;
 import command.RejouerEgt;
 import command.SelectionnerCmd;
 import command.StopperEgt;
@@ -41,16 +43,18 @@ public class Editeur {
 		Editeur editeur = new Editeur(engine, ihm);
 		engine.setEditeur(editeur);
 		EnregistreurImpl enregistreur = new EnregistreurImpl();
-		HistoriqueImpl historique = new HistoriqueImpl();
-		InsererCmd inserer = new InsererCmd(engine, enregistreur, ihm, null, historique);
-		SelectionnerCmd selectionner = new SelectionnerCmd(engine, enregistreur, 0, 0, historique);
-		CopierCmd copier = new CopierCmd(engine, enregistreur, historique);
-		CollerCmd coller = new CollerCmd(engine, enregistreur, historique);
-		CouperCmd couper = new CouperCmd(engine, enregistreur, historique);
-		AfficherCmd afficher = new AfficherCmd(engine);
+		HistoriqueImpl historique = new HistoriqueImpl(engine);
+		InsererCmd inserer = new InsererCmd(historique.getEngine(), enregistreur, ihm, null, historique);
+		SelectionnerCmd selectionner = new SelectionnerCmd(historique.getEngine(), enregistreur, 0, 0, historique);
+		CopierCmd copier = new CopierCmd(historique.getEngine(), enregistreur, historique);
+		CollerCmd coller = new CollerCmd(historique.getEngine(), enregistreur, historique);
+		CouperCmd couper = new CouperCmd(historique.getEngine(), enregistreur, historique);
+		AfficherCmd afficher = new AfficherCmd(historique);
 		DemarrerEgt demarrer = new DemarrerEgt(enregistreur);
 		StopperEgt stopper = new StopperEgt(enregistreur);
 		RejouerEgt rejouer = new RejouerEgt(enregistreur);
+		DefaireCmd defaire = new DefaireCmd(historique);
+		RefaireCmd refaire = new RefaireCmd(historique);
 		
 		ihm.addCommand("inserer", inserer);
 		ihm.addCommand("selectionner", selectionner);
@@ -61,6 +65,8 @@ public class Editeur {
 		ihm.addCommand("demarrer", demarrer);
 		ihm.addCommand("stopper", stopper);
 		ihm.addCommand("rejouer", rejouer);
+		ihm.addCommand("defaire", defaire);
+		ihm.addCommand("refaire", refaire);
 		ihm.start();
 	}
 

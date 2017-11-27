@@ -9,11 +9,7 @@ import receiver.MoteurImpl;
 /**
  * @(#) MoteurImplTest.java
  * @author LEBLANC Adrien && BUSSEREAU Keryann
-<<<<<<< HEAD:v3/test/fr/istic/m1/aco/tp2/MoteurImplTest.java
  * @version 3.0 V3 du projet mini-editeur
-=======
- * @version 1.0 V1 du projet mini-editeur
->>>>>>> dc37de6ae232b2a29cae71d4512d1042f4381bab:v2/test/fr/istic/m1/aco/tp2/MoteurImplTest.java
  */
 public class MoteurImplTest {
 

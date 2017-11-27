@@ -18,7 +18,7 @@ import receiver.MoteurImpl;
 /**
  * @(#) Editeur.java
  * @author LEBLANC Adrien && BUSSEREAU Keryann
- * @version 1.0 du projet mini-editeur
+ * @version 2.0 du projet mini-editeur
  */
 
 public class Editeur {

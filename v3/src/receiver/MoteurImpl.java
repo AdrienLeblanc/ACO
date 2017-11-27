@@ -1,15 +1,13 @@
 package receiver;
 
 import client.Editeur;
+import command.Command;
+import mememto.Mememto;
 
 /**
  * @(#) MoteurImpl.java
  * @author LEBLANC Adrien && BUSSEREAU Keryann
-<<<<<<< HEAD:v3/src/receiver/MoteurImpl.java
  * @version 3.0 V3 du projet mini-editeur
-=======
- * @version 1.0 V1 du projet mini-editeur
->>>>>>> dc37de6ae232b2a29cae71d4512d1042f4381bab:v2/src/receiver/MoteurImpl.java
  */
 public class MoteurImpl implements Moteur {
 
@@ -143,5 +141,34 @@ public class MoteurImpl implements Moteur {
 
 	public void afficher() {
 		System.out.println(texte);
+	}
+	
+	public MememtoMoteur create() {
+		return new MememtoMoteur();
+	}
+
+	class MememtoMoteur implements Mememto {
+		
+		private MoteurImpl engineMememto;
+
+		public MememtoMoteur() {
+			this.setEngine();
+		}
+
+		@Override
+		public void setMememto() { }
+
+		public void setEngine() {
+			this.engineMememto = new MoteurImpl(editeur, new StringBuffer(texte.toString()));
+			this.engineMememto.setPp(pp);
+			this.engineMememto.setSelection(sel);
+		}
+		
+		public MoteurImpl getEngine() {
+			return this.engineMememto;
+		}
+
+		@Override
+		public Command getCommand() { return null; }
 	}
 }

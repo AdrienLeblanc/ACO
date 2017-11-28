@@ -23,10 +23,44 @@ public class EnregistreurImplTest {
 		er.demarrer();
 		assertTrue(er.getAdemarre());
 	}
+	
+	@Test
+	public void testDemarrer2() {
+		EnregistreurImpl er = new EnregistreurImpl();
+		er.demarrer();
+		er.demarrer();
+		assertTrue(er.getAdemarre());
+	}
+	
+	@Test
+	public void testDemarrer3() {
+		EnregistreurImpl er = new EnregistreurImpl();
+		er.demarrer();
+		er.demarrer();
+		er.demarrer();
+		assertTrue(er.getAdemarre());
+	}
 
 	@Test
 	public void testStopper() {
 		EnregistreurImpl er = new EnregistreurImpl();
+		er.stopper();
+		assertTrue(!er.getAdemarre());
+	}
+	
+	@Test
+	public void testStopper2() {
+		EnregistreurImpl er = new EnregistreurImpl();
+		er.stopper();
+		er.stopper();
+		assertTrue(!er.getAdemarre());
+	}
+	
+	@Test
+	public void testStopper3() {
+		EnregistreurImpl er = new EnregistreurImpl();
+		er.stopper();
+		er.stopper();
 		er.stopper();
 		assertTrue(!er.getAdemarre());
 	}

@@ -9,7 +9,6 @@ import command.CouperCmd;
 import command.DefaireCmd;
 import command.InsererCmd;
 import command.SelectionnerCmd;
-import invoker.IHMImpl;
 import receiver.EnregistreurImpl;
 import receiver.HistoriqueImpl;
 import receiver.MoteurImpl;
@@ -18,25 +17,23 @@ public class HistoriqueImplTest {
 
 	@Test
 	public void testDefaire() {
-		Editeur e = new Editeur(null, null);
-		StringBuffer s = new StringBuffer();
-		MoteurImpl m = new MoteurImpl(e, s);
-		EnregistreurImpl er = new EnregistreurImpl();
-		e.setEngine(m);
+		Editeur editeur = new Editeur(null, null);
+		StringBuffer texte = new StringBuffer();
+		MoteurImpl engine = new MoteurImpl(editeur, texte);
+		EnregistreurImpl enregistreur = new EnregistreurImpl();
+		editeur.setEngine(engine);
+		HistoriqueImpl historique = new HistoriqueImpl(engine);
 		
-		HistoriqueImpl historique = new HistoriqueImpl(m);
+		InsererCmd inserer = new InsererCmd(historique.getEngine(), enregistreur, null, "bonjour", historique);
+		inserer.execute();
+		SelectionnerCmd selectionner = new SelectionnerCmd(engine, enregistreur, 0, 4, historique);
+		selectionner.execute();
+		CouperCmd couper = new CouperCmd(historique.getEngine(), enregistreur, historique);
+		couper.execute();
 		
-		InsererCmd ins = new InsererCmd(historique.getEngine(), er, null, "bonjour", historique);
-		ins.execute();
-		SelectionnerCmd sel = new SelectionnerCmd(m, er, 0, 4, historique);
-		sel.execute();
-		CouperCmd cp = new CouperCmd(historique.getEngine(), er, historique);
-		cp.execute();
+		DefaireCmd defaire = new DefaireCmd(historique);
+		defaire.execute();
 		
-		DefaireCmd def = new DefaireCmd(historique);
-		def.execute();
-		
-		System.out.println(historique.getEngine());
-		assertTrue(m.getTexte().toString().equals("bonjour"));
+		assertTrue(historique.getEngine().getTexte().toString().equals("bonjour"));
 	}
 }

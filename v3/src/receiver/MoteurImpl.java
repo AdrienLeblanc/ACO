@@ -31,6 +31,7 @@ public class MoteurImpl implements Moteur {
 	 * Copie la selection dans le presse-papier, puis efface du texte la selection.
 	 */
 	public void couper() {
+		fixSelection(sel[1], sel[0]);
 		int borne_inf = sel[0];
 		int borne_sup = sel[1];
 		pp = "";
@@ -47,6 +48,7 @@ public class MoteurImpl implements Moteur {
 	 * Copie la selection dans le presse-papier.
 	 */
 	public void copier() {
+		fixSelection(sel[1], sel[0]);
 		int borne_inf = sel[0];
 		int borne_sup = sel[1];
 		pp = "";
@@ -60,6 +62,7 @@ public class MoteurImpl implements Moteur {
 	 * Colle le presse-papier dans le texte a la place de la selection.
 	 */
 	public void coller() {
+		fixSelection(sel[1], sel[0]);
 		inserer(pp);
 	}
 
@@ -69,6 +72,7 @@ public class MoteurImpl implements Moteur {
 	 * @param s : String, chaine de caractere a inserer
 	 */
 	public void inserer(String s) {
+		fixSelection(sel[1], sel[0]);
 		for (int i = 0; i < (sel[1] - sel[0]); i++){
 			texte.deleteCharAt(sel[0]);
 		}
@@ -82,6 +86,12 @@ public class MoteurImpl implements Moteur {
 	 * @param fin : int, borne superieure
 	 */
 	public void selectionner(int debut, int fin) {
+		fixSelection(debut, fin);
+		sel[0] = debut;
+		sel[1] = fin;
+	}
+	
+	public void fixSelection(int debut, int fin) {
 		if (debut < 0) debut = 0;
 		if (fin < 0) fin = 0;
 		if (debut > texte.length()) debut = texte.length();
@@ -91,8 +101,8 @@ public class MoteurImpl implements Moteur {
 			fin = debut;
 			debut = tmp;
 		}
-		sel[0] = debut;
-		sel[1] = fin;
+		this.sel[0] = debut;
+		this.sel[1] = fin;
 	}
 
 	public Editeur getEditeur() {

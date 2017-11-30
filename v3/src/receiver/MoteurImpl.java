@@ -6,6 +6,7 @@ import mememto.Mememto;
 
 /**
  * @(#) MoteurImpl.java
+ * Classe permettant de faire des actions importantes telles que couper, copier, coller...
  * @author LEBLANC Adrien && BUSSEREAU Keryann
  * @version 3.0 V3 du projet mini-editeur
  */

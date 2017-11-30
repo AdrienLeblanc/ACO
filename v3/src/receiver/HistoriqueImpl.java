@@ -8,6 +8,7 @@ import receiver.MoteurImpl.MememtoMoteur;
 
 /**
  * @(#) MoteurImpl.java
+ * Classe permettant de gérer l'historique des actions
  * @author LEBLANC Adrien && BUSSEREAU Keryann
  * @version 3.0 V3 du projet mini-editeur
  */

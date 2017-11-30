@@ -8,6 +8,7 @@ import command.SelectionnerCmd;
 
 /**
  * @(#) IHMImpl.java
+ * Classe Implémenté de l'IHM, correspond au prompt utilisé par l'utilisateur
  * @author LEBLANC Adrien && BUSSEREAU Keryann
  * @version 3.0 V3 du projet mini-editeur
  */

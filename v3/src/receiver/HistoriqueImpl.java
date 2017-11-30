@@ -18,10 +18,19 @@ public class HistoriqueImpl implements Historique {
 	private Stack<MememtoMoteur> states = new Stack<MememtoMoteur>();
 	private Stack<Mememto> cancelled 	= new Stack<Mememto>();
 	
+	/**
+	 * HistoriqueImpl
+	 * Constructeur de l'objet HistoriqueImpl
+	 * @param engine 	Moteur
+	 * */
 	public HistoriqueImpl(MoteurImpl engine) {
 		this.setEngine(engine);
 	}
 	
+	/**
+	 * Méthode defaire
+	 * Permet d'annuler une action
+	 * */
 	@Override
 	public void defaire() {
 		if (!this.execution.empty()) {
@@ -34,6 +43,10 @@ public class HistoriqueImpl implements Historique {
 		}
 	}
 
+	/**
+	 * Méthode refaire
+	 * Permet de refaire une action précedemment annulée
+	 * */
 	@Override
 	public void refaire() {
 		if (!this.cancelled.empty()) {

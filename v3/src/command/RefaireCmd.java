@@ -1,7 +1,12 @@
 package command;
 
 import receiver.HistoriqueImpl;
-
+/**
+ * @(#) RefaireCmd.java
+ * Commande permetant refaire une action annulée
+ * @author LEBLANC Adrien && BUSSEREAU Keryann
+ * @version 3.0 V3 du projet mini-editeur
+ */
 public class RefaireCmd implements Command {
 
 	private final HistoriqueImpl historique;

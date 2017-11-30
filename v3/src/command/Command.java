@@ -8,7 +8,10 @@ package command;
  */
 
 public interface Command {
-	
+	/**
+	 * Méthode execute
+	 * Permet d'executer la commande sur laquelle elle est appelée
+	 * */
 	public void execute();
 
 }

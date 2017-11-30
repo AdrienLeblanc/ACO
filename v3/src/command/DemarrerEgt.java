@@ -3,6 +3,7 @@ package command;
 import receiver.EnregistreurImpl;
 /**
  * @(#) DemarrerEgt.java
+ * Commande permettant de lancer l'enregistrement
  * @author LEBLANC Adrien && BUSSEREAU Keryann
  * @version 3.0 V3 du projet mini-editeur
  */

@@ -7,6 +7,7 @@ import receiver.MoteurImpl;
 
 /**
  * @(#) CollerCmd.java
+ * Commande permettant de coller ce qui est dans le presse papier à un endroit donné
  * @author LEBLANC Adrien && BUSSEREAU Keryann
  * @version 3.0 V3 du projet mini-editeur
  */

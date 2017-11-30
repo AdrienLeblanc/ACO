@@ -30,14 +30,23 @@ public class Editeur {
 
 	private IHM ihm;
 
+	/**
+	 * Méthode Editeur
+	 * Constructeur de l'objet Editeur
+	 * */
 	public Editeur(Moteur engine, IHM ihm) {
 		this.setEngine(engine);
 		this.setIhm(ihm);
 	}
 
+	/**
+	 * Main
+	 * Fonction principale, on initialise tout puis on démarre l'IHM
+	 * @param args Eventuels arguments qu'on pourrait vouloir au lancement, non utilisé ici
+	 * */
 	public static void main(String[] args) {
 
-		/* Initialisations */
+		/* Initialisations des objets */
 		IHMImpl ihm = new IHMImpl();
 		MoteurImpl engine = new MoteurImpl(null, new StringBuffer(""));
 		Editeur editeur = new Editeur(engine, ihm);
@@ -56,6 +65,7 @@ public class Editeur {
 		DefaireCmd defaire = new DefaireCmd(historique);
 		RefaireCmd refaire = new RefaireCmd(historique);
 		
+		// Ajoute toutes les commandes qu'on doit pouvoir utiliser
 		ihm.addCommand("inserer", inserer);
 		ihm.addCommand("selectionner", selectionner);
 		ihm.addCommand("copier", copier);

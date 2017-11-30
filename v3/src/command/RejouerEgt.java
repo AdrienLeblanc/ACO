@@ -4,6 +4,7 @@ import receiver.EnregistreurImpl;
 
 /**
  * @(#) RejouerEgt.java
+ * Permet de rejouer un moment qui a été enregistré
  * @author LEBLANC Adrien && BUSSEREAU Keryann
  * @version 3.0 V3 du projet mini-editeur
  */

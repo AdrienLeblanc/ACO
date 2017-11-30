@@ -8,6 +8,7 @@ import receiver.MoteurImpl;
 
 /**
  * @(#) InsererCmd.java
+ * Commande permettant d'insérer un texte à un endroit donné
  * @author LEBLANC Adrien && BUSSEREAU Keryann
  * @version 3.0 V3 du projet mini-editeur
  */

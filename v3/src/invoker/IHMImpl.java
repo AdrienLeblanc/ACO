@@ -17,10 +17,18 @@ public class IHMImpl implements IHM {
 
 	public IHMImpl() { }
 
+	/**
+	 * Méthode addCommand
+	 * Permet d'ajouter les commandes que l'on veut pouvoir utiliser dans l'IHM
+	 * */
 	public void addCommand(String keyword, Command cmd) {
 		map.put(keyword, cmd);
 	}
 
+	/**
+	 * Méthode getText
+	 * Demande une chaine de caractère sur l'entrée standard
+	 * */
 	public String getText() {
 		System.out.print("Chaine de caracteres a inserer: ");
 		@SuppressWarnings("resource")
@@ -29,6 +37,10 @@ public class IHMImpl implements IHM {
 		return str;
 	}
 
+	/**
+	 * Méthode start
+	 * Lance l'IHM, donc ce qui est dans le prompt 
+	 * */
 	public void start() {
 		System.out.print("ACO-TP1-V1$: ");
 		Scanner sc = new Scanner(System.in);

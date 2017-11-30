@@ -6,6 +6,7 @@ public class StopperEgt implements Command {
 
 /**
  * @(#) StopperEgt.java
+ * Commande permettant de stopper un enregistrement
  * @author LEBLANC Adrien && BUSSEREAU Keryann
  * @version 3.0 V3 du projet mini-editeur
  */

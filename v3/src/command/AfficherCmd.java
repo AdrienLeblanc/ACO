@@ -4,6 +4,7 @@ import receiver.HistoriqueImpl;
 
 /**
  * @(#) AfficherCmd.java
+ * Commande permettant d'afficher le texte de notre éditeur (buffer string)
  * @author LEBLANC Adrien && BUSSEREAU Keryann
  * @version 3.0 V3 du projet mini-editeur
  */

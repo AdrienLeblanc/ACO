@@ -7,6 +7,7 @@ import receiver.MoteurImpl;
 
 /**
  * @(#) CouperCmd.java
+ * Commande permettant de couper une portion de texte sélectionnée auparavant
  * @author LEBLANC Adrien && BUSSEREAU Keryann
  * @version 3.0 V3 du projet mini-editeur
  */

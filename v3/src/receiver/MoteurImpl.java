@@ -56,11 +56,7 @@ public class MoteurImpl implements Moteur {
 	}
 
 	/**
-<<<<<<< HEAD
 	 * Methode Coller
-=======
-	 * Methode Couper
->>>>>>> 8616d0f2a226c51c6b9cd66f9dd913d7be5c95bb
 	 * Colle le presse-papier dans le texte a la place de la selection.
 	 */
 	public void coller() {
@@ -147,6 +143,10 @@ public class MoteurImpl implements Moteur {
 		return new MememtoMoteur();
 	}
 
+	/**
+	 * MementoMoteur
+	 * Memento permettant d'enregistrer l'état du moteur à un instant t
+	 * */
 	class MememtoMoteur implements Mememto {
 		
 		private MoteurImpl engineMememto;

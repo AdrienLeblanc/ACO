@@ -43,7 +43,7 @@ public class IHMImpl implements IHM {
 	 * Lance l'IHM, donc ce qui est dans le prompt 
 	 * */
 	public void start() {
-		System.out.print("ACO-TP1-V1$: ");
+		System.out.print("ACO-TP1-V3$: ");
 		Scanner sc = new Scanner(System.in);
 		String str = sc.nextLine();
 

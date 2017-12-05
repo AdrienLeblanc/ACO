@@ -26,7 +26,7 @@ public class IHMImpl implements IHM {
 	}
 
 	public void start() {
-		System.out.print("ACO-TP1-V1$: ");
+		System.out.print("ACO-TP1-V2$: ");
 		Scanner sc = new Scanner(System.in);
 		String str = sc.nextLine();
 

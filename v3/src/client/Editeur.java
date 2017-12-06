@@ -19,8 +19,9 @@ import receiver.Moteur;
 import receiver.MoteurImpl;
 
 /**
- * @(#) Editeur.java
- * @author LEBLANC Adrien && BUSSEREAU Keryann
+ * Editeur.java
+ * @author LEBLANC Adrien
+ * @author BUSSEREAU Keryann
  * @version 3.0 V3 du projet mini-editeur
  */
 
@@ -31,8 +32,10 @@ public class Editeur {
 	private IHM ihm;
 
 	/**
-	 * Méthode Editeur
+	 * Methode Editeur
 	 * Constructeur de l'objet Editeur
+	 * @param engine : Moteur
+	 * @param ihm : IHM
 	 * */
 	public Editeur(Moteur engine, IHM ihm) {
 		this.setEngine(engine);
@@ -41,8 +44,8 @@ public class Editeur {
 
 	/**
 	 * Main
-	 * Fonction principale, on initialise tout puis on démarre l'IHM
-	 * @param args Eventuels arguments qu'on pourrait vouloir au lancement, non utilisé ici
+	 * Fonction principale, on initialise tout puis on demarre l'IHM
+	 * @param args Eventuels arguments qu'on pourrait vouloir au lancement, non utilise ici
 	 * */
 	public static void main(String[] args) {
 

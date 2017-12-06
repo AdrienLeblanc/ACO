@@ -2,9 +2,10 @@ package command;
 
 import receiver.HistoriqueImpl;
 /**
- * @(#) DefaireCmd.java
+ * DefaireCmd.java
  * Commande permettant d'annuler une action
- * @author LEBLANC Adrien && BUSSEREAU Keryann
+ * @author LEBLANC Adrien
+ * @author BUSSEREAU Keryann
  * @version 3.0 V3 du projet mini-editeur
  */
 public class DefaireCmd implements Command {

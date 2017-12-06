@@ -6,9 +6,10 @@ import command.Command;
 import mememto.Mememto;
 
 /**
- * @(#) EnregistreurImpl.java
- * Classe gérant les démarrage et arrêt de l'enregistrement
- * @author LEBLANC Adrien && BUSSEREAU Keryann
+ * EnregistreurImpl.java
+ * Classe gerant les demarrage et arret de l'enregistrement
+ * @author LEBLANC Adrien
+ * @author BUSSEREAU Keryann
  * @version 3.0 V3 du projet mini-editeur
  */
 public class EnregistreurImpl implements Enregistreur {

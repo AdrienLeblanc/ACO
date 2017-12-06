@@ -6,9 +6,10 @@ import receiver.HistoriqueImpl;
 import receiver.MoteurImpl;
 
 /**
- * @(#) CopierCmd.java
- * Commande permettant de copier le texte qui a été selectionné
- * @author LEBLANC Adrien && BUSSEREAU Keryann
+ * CopierCmd.java
+ * Commande permettant de copier le texte qui a ete selectionne
+ * @author LEBLANC Adrien
+ * @author BUSSEREAU Keryann
  * @version 3.0 V3 du projet mini-editeur
  */
 public class CopierCmd implements Command {
@@ -21,6 +22,9 @@ public class CopierCmd implements Command {
 	
 	/**
 	 * Constructeur
+	 * @param engine : MoteurImpl
+	 * @param enregistreur : EnregistreurImpl
+	 * @param historique : HistoriqueImpl
 	 * */
 	public CopierCmd(MoteurImpl engine, EnregistreurImpl enregistreur, HistoriqueImpl historique) {
 		this.engine = engine;
@@ -29,8 +33,8 @@ public class CopierCmd implements Command {
 	}
 
 	/**
-	 * Méthode execute
-	 * Permet d'executer la commande sur laquelle elle est appelée
+	 * Methode execute
+	 * Permet d'executer la commande sur laquelle elle est appelee
 	 */
 	@Override
 	public void execute() {
@@ -50,7 +54,7 @@ public class CopierCmd implements Command {
 
 	/**
 	 * Classe MementoCopier
-	 * Permet d'enregistrer l'état de copier à un instant t
+	 * Permet d'enregistrer l'etat de copier a un instant t
 	 * */
 	class MememtoCopier implements Mememto {
 				

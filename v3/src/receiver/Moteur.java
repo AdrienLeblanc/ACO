@@ -2,8 +2,9 @@ package receiver;
 
 
 /**
- * @(#) Moteur.java
- * @author LEBLANC Adrien && BUSSEREAU Keryann
+ * Moteur.java
+ * @author LEBLANC Adrien
+ * @author BUSSEREAU Keryann
  * @version 3.0 V3 du projet mini-editeur
  */
 public interface Moteur {

@@ -6,9 +6,10 @@ import receiver.HistoriqueImpl;
 import receiver.MoteurImpl;
 
 /**
- * @(#) CouperCmd.java
- * Commande permettant de couper une portion de texte sélectionnée auparavant
- * @author LEBLANC Adrien && BUSSEREAU Keryann
+ * CouperCmd.java
+ * Commande permettant de couper une portion de texte selectionnee auparavant
+ * @author LEBLANC Adrien
+ * @author BUSSEREAU Keryann
  * @version 3.0 V3 du projet mini-editeur
  */
 public class CouperCmd implements Command {

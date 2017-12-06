@@ -2,16 +2,17 @@ package command;
 
 
 /**
- * @(#) Commande.java
+ * Commande.java
  * Interface commande
- * @author LEBLANC Adrien && BUSSEREAU Keryann
+ * @author LEBLANC Adrien
+ * @author BUSSEREAU Keryann
  * @version 3.0 V3 du projet mini-editeur
  */
 
 public interface Command {
 	/**
-	 * Méthode execute
-	 * Permet d'executer la commande sur laquelle elle est appelée
+	 * Methode execute
+	 * Permet d'executer la commande sur laquelle elle est appelee
 	 * */
 	public void execute();
 

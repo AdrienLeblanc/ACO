@@ -7,9 +7,10 @@ import receiver.HistoriqueImpl;
 import receiver.MoteurImpl;
 
 /**
- * @(#) InsererCmd.java
- * Commande permettant d'insérer un texte à un endroit donné
- * @author LEBLANC Adrien && BUSSEREAU Keryann
+ * InsererCmd.java
+ * Commande permettant d'inserer un texte a un endroit donne
+ * @author LEBLANC Adrien
+ * @author BUSSEREAU Keryann
  * @version 3.0 V3 du projet mini-editeur
  */
 public class InsererCmd implements Command {

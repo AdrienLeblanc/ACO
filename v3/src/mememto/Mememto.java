@@ -4,8 +4,9 @@ import command.Command;
 import receiver.MoteurImpl;
 
 /**
- * @(#) Memento.java
- * @author LEBLANC Adrien && BUSSEREAU Keryann
+ * Memento.java
+ * @author LEBLANC Adrien
+ * @author BUSSEREAU Keryann
  * @version 3.0 V3 du projet mini-editeur
  */
 public interface Mememto {

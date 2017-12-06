@@ -5,9 +5,10 @@ import command.Command;
 import mememto.Mememto;
 
 /**
- * @(#) MoteurImpl.java
+ * MoteurImpl.java
  * Classe permettant de faire des actions importantes telles que couper, copier, coller...
- * @author LEBLANC Adrien && BUSSEREAU Keryann
+ * @author LEBLANC Adrien
+ * @author BUSSEREAU Keryann
  * @version 3.0 V3 du projet mini-editeur
  */
 public class MoteurImpl implements Moteur {
@@ -160,7 +161,7 @@ public class MoteurImpl implements Moteur {
 
 	/**
 	 * MementoMoteur
-	 * Memento permettant d'enregistrer l'état du moteur à un instant t
+	 * Memento permettant d'enregistrer l'etat du moteur a un instant t
 	 * */
 	class MememtoMoteur implements Mememto {
 		

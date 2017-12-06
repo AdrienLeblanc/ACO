@@ -6,9 +6,10 @@ import receiver.HistoriqueImpl;
 import receiver.MoteurImpl;
 
 /**
- * @(#) CollerCmd.java
- * Commande permettant de coller ce qui est dans le presse papier à un endroit donné
- * @author LEBLANC Adrien && BUSSEREAU Keryann
+ * CollerCmd.java
+ * Commande permettant de coller ce qui est dans le presse papier a un endroit donne
+ * @author LEBLANC Adrien
+ * @author BUSSEREAU Keryann
  * @version 3.0 V3 du projet mini-editeur
  */
 public class CollerCmd implements Command {

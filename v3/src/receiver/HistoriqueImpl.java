@@ -7,9 +7,10 @@ import mememto.Mememto;
 import receiver.MoteurImpl.MememtoMoteur;
 
 /**
- * @(#) MoteurImpl.java
- * Classe permettant de gérer l'historique des actions
- * @author LEBLANC Adrien && BUSSEREAU Keryann
+ * MoteurImpl.java
+ * Classe permettant de gerer l'historique des actions
+ * @author LEBLANC Adrien
+ * @author BUSSEREAU Keryann
  * @version 3.0 V3 du projet mini-editeur
  */
 public class HistoriqueImpl implements Historique {
@@ -29,7 +30,7 @@ public class HistoriqueImpl implements Historique {
 	}
 	
 	/**
-	 * Méthode defaire
+	 * Methode defaire
 	 * Permet d'annuler une action
 	 * */
 	@Override
@@ -45,8 +46,8 @@ public class HistoriqueImpl implements Historique {
 	}
 
 	/**
-	 * Méthode refaire
-	 * Permet de refaire une action précedemment annulée
+	 * Methode refaire
+	 * Permet de refaire une action precedemment annulee
 	 * */
 	@Override
 	public void refaire() {

@@ -3,9 +3,10 @@ package command;
 import receiver.HistoriqueImpl;
 
 /**
- * @(#) AfficherCmd.java
- * Commande permettant d'afficher le texte de notre éditeur (buffer string)
- * @author LEBLANC Adrien && BUSSEREAU Keryann
+ * AfficherCmd.java
+ * Commande permettant d'afficher le texte de notre editeur (buffer string)
+ * @author LEBLANC Adrien
+ * @author BUSSEREAU Keryann
  * @version 3.0 V3 du projet mini-editeur
  */
 public class AfficherCmd implements Command {

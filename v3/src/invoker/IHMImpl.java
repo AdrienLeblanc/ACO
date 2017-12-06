@@ -7,9 +7,10 @@ import command.Command;
 import command.SelectionnerCmd;
 
 /**
- * @(#) IHMImpl.java
- * Classe Implémenté de l'IHM, correspond au prompt utilisé par l'utilisateur
- * @author LEBLANC Adrien && BUSSEREAU Keryann
+ * IHMImpl.java
+ * Classe Implementee de l'IHM, correspond au prompt utilise par l'utilisateur
+ * @author LEBLANC Adrien
+ * @author BUSSEREAU Keryann
  * @version 3.0 V3 du projet mini-editeur
  */
 public class IHMImpl implements IHM {
@@ -19,7 +20,7 @@ public class IHMImpl implements IHM {
 	public IHMImpl() { }
 
 	/**
-	 * Méthode addCommand
+	 * Methode addCommand
 	 * Permet d'ajouter les commandes que l'on veut pouvoir utiliser dans l'IHM
 	 * */
 	public void addCommand(String keyword, Command cmd) {
@@ -27,8 +28,8 @@ public class IHMImpl implements IHM {
 	}
 
 	/**
-	 * Méthode getText
-	 * Demande une chaine de caractère sur l'entrée standard
+	 * Methode getText
+	 * Demande une chaine de caractere sur l'entree standard
 	 * */
 	public String getText() {
 		System.out.print("Chaine de caracteres a inserer: ");
@@ -39,7 +40,7 @@ public class IHMImpl implements IHM {
 	}
 
 	/**
-	 * Méthode start
+	 * Methode start
 	 * Lance l'IHM, donc ce qui est dans le prompt 
 	 * */
 	public void start() {

@@ -1,8 +1,9 @@
 package receiver;
 
 /**
- * @(#) Enregistreur.java
- * @author LEBLANC Adrien && BUSSEREAU Keryann
+ * Enregistreur.java
+ * @author LEBLANC Adrien
+ * @author BUSSEREAU Keryann
  * @version 3.0 V3 du projet mini-editeur
  */
 public interface Enregistreur {

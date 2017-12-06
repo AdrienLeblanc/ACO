@@ -5,9 +5,10 @@ import receiver.EnregistreurImpl;
 public class StopperEgt implements Command {
 
 /**
- * @(#) StopperEgt.java
+ * StopperEgt.java
  * Commande permettant de stopper un enregistrement
- * @author LEBLANC Adrien && BUSSEREAU Keryann
+ * @author LEBLANC Adrien
+ * @author BUSSEREAU Keryann
  * @version 3.0 V3 du projet mini-editeur
  */
 private final EnregistreurImpl enregistreur;
